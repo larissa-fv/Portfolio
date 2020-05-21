@@ -199,6 +199,40 @@
     font-family: cursive;
   }
   
+@media (min-width: 250px) {
+    .sobre p {
+        color: lightgray; 
+    }
+     .sobre a {
+    color: lightgray;
+    text-decoration: underline;
+  }
+  
+  .sobre a:hover {
+    color: teal;
+    text-decoration: none;
+    
+  }
+}
+
+@media (min-width: 670px) {
+    .sobre p {
+        color: black; 
+    }
+     .sobre a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  .sobre a:hover {
+    color: teal;
+    text-decoration: none;
+    
+  }
+}
+
+    
+    
   .sobre a {
     color: black;
     text-decoration: underline;
