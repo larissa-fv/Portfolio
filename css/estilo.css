@@ -6,11 +6,12 @@
   }
   
   body {
-    background-image: url('img/foto-degrade-cinza-creditos-depositphotos.jpg');
-    background-size: auto 160vh; 
+    background-image: url('img/background2.png');
+    background-size: 100%; 
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
     font-size: 12px;
+    position: 100%;
   }
   
   @media (min-width:320px) {
@@ -127,7 +128,7 @@
   }*/
   
   .site-title {
-    color: black;
+    color:rgb(245, 245, 245);
     font-size: normal;
     font-style: normal;
     text-align: center;
@@ -148,6 +149,8 @@
     min-height: 100vh;
     margin-bottom: 1em;
     text-align: center;
+   
+   
   }
   
   .contato{
@@ -182,17 +185,26 @@
   .contato h2,
   .projetos h2 {
     font-family: 'Special Elite', cursive;
-    color: black;
+    color: rgb(184, 184, 184);
     margin-bottom: 0.5em;
     font-size: 2em;
     text-align: center;
-    
-    
   }
+
+  .sobre2 p {
+    font-family:  cursive;
+    color: rgb(238, 247, 238);
+    margin-bottom: 1.4em;
+    text-align: justify;
+    text-align: center;
+  }
+
+  
+  
   
   .sobre p {
     
-    color: black;
+    color: rgb(216, 236, 252);
     text-indent: 1.4em;
     margin-bottom: 1.4em;
     text-align: justify;
@@ -204,7 +216,7 @@
         color: lightgray; 
     }
      .sobre a {
-    color: lightgray;
+    color: rgb(5, 5, 5);
     text-decoration: underline;
   }
   
@@ -217,10 +229,10 @@
 
 @media (min-width: 670px) {
     .sobre p {
-        color: black; 
+        color: rgb(232, 241, 237); 
     }
      .sobre a {
-    color: black;
+    color: rgb(10, 10, 10);
     text-decoration: underline;
   }
   
@@ -410,7 +422,7 @@
   }
   
   .contato a {
-    color: black;
+    color: rgb(4, 11, 20);
     font-size: 3em;
     transition: text-shadow 1s;
     text-decoration: none;
