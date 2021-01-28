@@ -213,7 +213,7 @@
   
 @media (min-width: 250px) {
     .sobre p {
-        color: lightgray; 
+        color: rgb(238, 231, 231); 
     }
      .sobre a {
     color: rgb(5, 5, 5);
