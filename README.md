@@ -1,5 +1,4 @@
 # Portfólio 
 
 
-Este site foi desenvolvido durante a imerssão css da alura
-https://www.alura.com.br/
+Portfólio desenvolvido com o intuito de facilitar o acesso a informaçoes comerciais a meu respeito.
