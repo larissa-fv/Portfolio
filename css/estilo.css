@@ -6,7 +6,8 @@
   }
   
   body {
-    background-image: url('img/background2.png');
+    /*background-image: url('img/background2.png');*/
+    background-color: rgb(77, 113, 180);
     background-size: 100%; 
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
