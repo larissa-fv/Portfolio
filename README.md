@@ -39,7 +39,7 @@ Se você deseja executar o portfólio localmente em sua máquina, siga as etapas
 
 ## 🖼️ Demonstração
 
-Você pode acessar a versão ao vivo deste portfólio diretamente por [aqui](https://larissa-ferreira-portfolio.com) (substitua por seu domínio real).
+Você pode acessar a versão ao vivo deste portfólio diretamente por [aqui](https://larissa-fv.github.io/Portfolio/).
 
 ## 📚 Estrutura de Arquivos
 
