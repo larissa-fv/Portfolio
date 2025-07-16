@@ -1,193 +1,73 @@
-/* Soft reset do CSS */
+:root {
+  --bg: #111;
+  --fg: #e0e0e0;
+  --fg-light: rgba(224,224,224,0.7);
+  --accent: #00ffe1;
+  --font: 'Inter', sans-serif;
+}
+
 * {
-  margin: 5;
-  padding: 5;
   box-sizing: border-box;
 }
 
 body {
-  background-color: #f0f4f8; /* Fundo leve */
-  font-family: 'Arial', sans-serif;
-  color: #333; /* Texto escuro */
-}
-
-/* Header - Seção com o nome e subtítulo */
-header {
-  height: 50vh; /* Aumenta a altura para dar mais espaço vertical */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #0056b3; /* Azul forte */
-  color: white;
-  text-align: center;
-  position: relative;
-  padding-top: 50px; /* Move o conteúdo para baixo */
-}
-
-.site-title {
-  font-size: 3rem; /* Aumenta o tamanho do nome */
-  font-weight: bold;
-  margin-bottom: 10px; /* Espaço entre o nome e o subtítulo */
-}
-
-.site-subtitle {
-  font-size: 1.5rem; /* Tamanho adequado para o subtítulo */
-  font-weight: normal;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 5px; /* Adiciona espaço para o sublinhado */
-}
-
-.site-subtitle::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: white;
-  position: absolute;
-  bottom: 0;
-}
-
-/* Animação de entrada para o título */
-.titulo {
-  transform: skew(1); /* Remove o efeito de inclinação */
-  opacity: 0;
-  animation: fadeIn 1s forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Menu de navegação fixo no topo */
-.menu {
-  background-color: rgba(255, 255, 255, 0.9); /* Branco com transparência */
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
-}
-
-.menu ul {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 0;
-}
-
-.menu li {
-  list-style: none;
-}
-
-.menu a {
-  color: #0056b3; /* Azul */
-  padding: 10px 20px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.menu a:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  color: #0056b3; /* Azul ao passar o mouse */
-}
-
-/* Seção Sobre */
-.sobre {
-  padding: 40px 20px;
-  background-color: #ffffff; /* Branco para a seção sobre */
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
-  margin: 20px 0;
-  text-align: left;
-}
-
-.sobre h2, .projetos h2, .contato h2 {
-  margin-bottom: 20px;
-  font-size: 2rem;
-  color: #0056b3; /* Azul forte */
-}
-
-.sobre p, .projetos p, .contato p {
-  margin-bottom: 10px;
+  margin: 0;
+  font-family: var(--font);
+  background-color: var(--bg);
+  color: var(--fg);
   line-height: 1.6;
 }
 
-/* Grid de projetos */
-.projetos {
-  padding: 40px 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsivo com colunas flexíveis */
-  gap: 20px; /* Espaço entre os cards */
+/* Cabeçalhos elegantes */
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-/* Estilos dos cards de projetos */
-.card {
-  border: none; /* Remove a borda padrão do card */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
-  border-radius: 10px;
-  overflow: hidden; /* Impede que o conteúdo saia do card */
-  transition: transform 0.3s, box-shadow 0.3s; /* Animação ao passar o mouse */
+/* Seções centrais */
+section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.card:hover {
-  transform: scale(1.05); /* Leve aumento ao passar o mouse */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+/* Textos suaves */
+p, li {
+  color: var(--fg-light);
 }
 
-.card img {
+/* Estilo de links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Botões e contatos */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.6rem;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #00c9b7;
+}
+
+/* Inputs – seção contato */
+input, textarea {
   width: 100%;
-  height: auto; /* Mantém a proporção */
-  object-fit: cover; /* Garante que a imagem não distorça */
-  border-radius: 10px 10px 0 0; /* Bordas arredondadas no topo da imagem */
-}
-
-.card-back h3 {
-  font-size: 1.25rem;
-  padding: 10px;
-  background-color: #0056b3;
-  color: white;
-}
-
-/* Ajustar tamanho das imagens nos projetos */
-.img-projetos {
-  width: 100%; /* Responsiva */
-  max-width: 300px; /* Limite de largura */
-  height: auto; /* Mantém a proporção */
-  object-fit: cover; /* Garante que a imagem não distorça */
-  border-radius: 10px; /* Bordas arredondadas */
-}
-
-/* Seção de Contato */
-.contato {
-  padding: 40px 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.icons a {
-  margin: 0 15px;
-  color: #0056b3; /* Azul */
-  font-size: 24px;
-  transition: color 0.3s;
-}
-
-.icons a:hover {
-  color: #333; /* Cor mais escura ao passar o mouse */
-}
-
-/* Rodapé */
-.bg-footer {
-  background-color: #0056b3; /* Azul forte */
-  color: white;
-  padding: 20px;
-  text-align: center;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  background: #222;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: var(--fg);
+  font-size: 1rem;
 }
