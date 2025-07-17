@@ -1,73 +1,172 @@
-:root {
-  --bg: #111;
-  --fg: #e0e0e0;
-  --fg-light: rgba(224,224,224,0.7);
-  --accent: #00ffe1;
-  --font: 'Inter', sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0;
-  font-family: var(--font);
-  background-color: var(--bg);
-  color: var(--fg);
-  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f8fa;
+  padding-top: 70px;
 }
 
-/* Cabeçalhos elegantes */
-h1, h2, h3 {
+/* Navbar */
+nav.navbar {
+  background-color: #222831;
+}
+nav.navbar .navbar-brand,
+nav.navbar .nav-link {
+  color: #eeeeee;
   font-weight: 600;
+}
+nav.navbar .nav-link:hover {
+  color: #00adb5 !important;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 3rem 1rem 4rem;
+  background: linear-gradient(135deg, #222831 0%, #393e46 100%);
+  color: white;
+  position: relative;
+}
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid #00adb5;
+  animation: float 5s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px #00adb5);
   margin-bottom: 1rem;
 }
-
-/* Seções centrais */
-section {
-  padding: 4rem 2rem;
-  max-width: 900px;
-  margin: 0 auto;
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+header p.lead {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-top: 0.25rem;
 }
 
-/* Textos suaves */
-p, li {
-  color: var(--fg-light);
+/* Section Titles */
+h2 {
+  font-weight: 700;
+  color: #222831;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-/* Estilo de links */
-a {
-  color: var(--accent);
+/* About Section */
+#about p {
+  max-width: 720px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.5;
+  color: #393e46;
+}
+
+/* Timeline */
+#projects .timeline {
+  position: relative;
+  max-width: 720px;
+  margin: 2rem auto;
+  padding-left: 40px;
+  border-left: 4px solid #00adb5;
+}
+#projects .timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+  padding-left: 30px;
+}
+#projects .timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -14px;
+  top: 5px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #00adb5;
+  border: 4px solid white;
+  box-shadow: 0 0 10px #00adb5;
+}
+#projects .timeline-item h4 {
+  font-weight: 600;
+  color: #222831;
+}
+#projects .timeline-item p {
+  margin-top: 0.5rem;
+  color: #555;
+}
+#projects .timeline-item a.btn-github {
+  margin-top: 0.5rem;
+  display: inline-block;
+  color: #00adb5;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1.5px solid #00adb5;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+#projects .timeline-item a.btn-github:hover {
+  background-color: #00adb5;
+  color: white;
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
+
+/* Contact */
+#contact {
+  max-width: 720px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+#contact form label {
+  font-weight: 600;
+  color: #222831;
+}
+#contact form input,
+#contact form textarea {
+  border-radius: 6px;
+  border: 1.5px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+#contact form input:focus,
+#contact form textarea:focus {
+  outline: none;
+  border-color: #00adb5;
+  box-shadow: 0 0 8px #00adb5;
+}
+#contact button {
+  background-color: #00adb5;
+  border: none;
+  padding: 10px 28px;
+  font-weight: 700;
+  border-radius: 6px;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+#contact button:hover {
+  background-color: #007b7f;
+}
+#contact .social-icons {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+#contact .social-icons a {
+  color: #222831;
+  margin: 0 15px;
+  font-size: 2.2rem;
+  transition: color 0.3s ease;
+}
+#contact .social-icons a:hover {
+  color: #00adb5;
 }
 
-/* Botões e contatos */
-.btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.8rem 1.6rem;
-  background: var(--accent);
-  color: var(--bg);
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-.btn:hover {
-  background: #00c9b7;
-}
-
-/* Inputs – seção contato */
-input, textarea {
-  width: 100%;
-  padding: 1rem;
-  margin-top: 0.5rem;
-  background: #222;
-  border: 1px solid #333;
-  border-radius: 6px;
-  color: var(--fg);
-  font-size: 1rem;
+/* Footer */
+footer {
+  background-color: #222831;
+  color: #eee;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
 }

@@ -1,27 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Larissa Ferreira</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Portfólio Larissa Ferreira</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<!-- FontAwesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+<!-- AOS CSS (scroll animations) -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+<!-- Seu CSS -->
+<link href="css/style.css" rel="stylesheet" />
 </head>
-<body>
-    <header id="titulo"></header>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="80">
 
-    <nav class="menu">
-        <ul id="nav-menu"></ul>
-    </nav>
+<!-- Navbar -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+  <div class="container">
+    <a class="navbar-brand" href="#">Larissa Ferreira </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks" aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navLinks">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#home">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projetos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-    <section id="Sobre" class="sobre"></section>
+<!-- Header -->
+<header id="home" class="container">
+  <img
+    src="https://api.dicebear.com/7.x/adventurer/svg?seed=Larissa&hairColor=blue01"
+    alt="Avatar IA Larissa"
+    class="avatar"
+  />
+  <h1>Larissa Ferreira</h1>
+  <p class="lead">Tecnologia | Ciencia de Dados | IoT </p>
+</header>
 
-    <section id="Projetos" class="projetos"></section>
+<!-- About -->
+<section id="about" class="container py-5">
+  <h5 data-aos="fade-right" data-aos-duration="900"> /print("about me")</h5>
+  <p data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
+     Sou graduada em Gestão da Tecnologia da Informação pela Pontifícia Universidade Católica do Paraná (PUCPR), com experiência crescente em ciência de dados, análise estatística e projetos integrados com Internet das Coisas (IoT). Tenho desenvolvido estudos na indústria farmacêutica e em dados públicos usando Python, JupyterLab e ferramentas como Matplotlib, Seaborn e Plotly. Acredito que tecnologia deve ser usada para transformar e melhorar a sociedade.
+  </p>
+  <p data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+     I hold a degree in Information Technology Management from PUCPR and have been developing skills in data science, statistical analysis, and IoT-integrated projects. I have worked on pharmaceutical industry data and public data analysis using Python, JupyterLab, and visualization libraries like Matplotlib, Seaborn, and Plotly. I believe technology should be harnessed to transform and improve society.
+  </p>
+</section>
 
-    <section id="Contato" class="contato"></section>
+<!-- Projects / Timeline -->
+<section id="projects" class="container py-5">
+  <h2 data-aos="fade-right" data-aos-duration="900">Linha do Tempo dos Projetos</h2>
+  <div class="timeline projetos" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
+    <!-- Projetos serão inseridos aqui via JS -->
+  </div>
+</section>
 
-    <footer class="bg-footer">© 2024 Larissa Ferreira. Todos os direitos reservados.</footer>
+<!-- Contact -->
+<section id="contact" class="container py-5">
+  <h2 data-aos="fade-right" data-aos-duration="900">Contato</h2>
+  <form id="contactForm" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150" class="mb-4">
+    <div class="mb-3">
+      <label for="nome" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="nome" placeholder="Seu nome" required />
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">E-mail</label>
+      <input type="email" class="form-control" id="email" placeholder="seu@email.com" required />
+    </div>
+    <div class="mb-3">
+      <label for="mensagem" class="form-label">Mensagem</label>
+      <textarea class="form-control" id="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+  <div class="social-icons text-center">
+    <a href="https://github.com/larissa-fv" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/larissa-ferreira-verissimo" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+  </div>
+</section>
 
-    <script src="js/scripts.js"></script>
+<!-- Footer -->
+<footer>
+  <p>© 2025 Larissa F V. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Seu JS -->
+<script src="js/scripts.js"></script>
+
 </body>
 </html>
